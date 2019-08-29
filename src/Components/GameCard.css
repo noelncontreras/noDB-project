@@ -1,0 +1,69 @@
+.gamecard-container {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8b8989;
+    border: 1px solid black;
+    border-left-style: none;
+    border-right-style: none;
+}
+.video-frame {
+    width: 300px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+}
+.edit-delete {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 40px;
+}
+#edit-button {
+    font-size: 18px;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: #d21919;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    outline: none;
+}
+#edit-button:hover {
+    color: white;
+    border: 1px solid #d21919;
+    background-color: #2e2e2e;
+}
+#delete-button {
+    font-size: 18px;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: #d21919;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    outline: none;
+}
+#delete-button:hover {
+    color: white;
+    border: 1px solid #d21919;
+    background-color: #2e2e2e;
+}
+.game-info {
+    width: 15vw;
+    height: 25vh;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.game-info > li {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
 import AddGame from './Components/AddGame';
+import GameCard from './Components/GameCard';
+import Footerbar from './Components/Footerbar';
 
 import './App.css';
 
@@ -9,6 +11,8 @@ function App() {
     <div>
       <Navbar />
       <AddGame />
+      <GameCard />
+      <Footerbar />
     </div>
   );
 }

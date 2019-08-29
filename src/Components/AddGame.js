@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from "axios";
 
 import "./AddGame.css";
 
@@ -6,12 +7,17 @@ export default class AddGame extends Component {
     constructor() {
         super();
         this.state = {
-            gameTitle: "",
-            genre: "",
-            developer: "",
-            trailerLink: "",
+            games: []
         }
     }
+    componentDidMount() {
+        axios.get("http://localhost:5000/api/games")
+        .then(response => {this.setState({games: response.data})
+        .catch(err => console.log(err))
+        })
+    }
+
+
     render () {
         return (
             <section className= "add-container">
