@@ -1,5 +1,5 @@
 import React from "react";
-import './GameCards.css';
+import "./GameCards.css";
 
 export default function GameCards(props) {
 
