@@ -1,35 +1,39 @@
 import React, { Component } from 'react';
 import axios from "axios";
 
-import "./AddGame.css";
+import "./AddGames.css";
 
-export default class AddGame extends Component {
+export default class AddGames extends Component {
     constructor() {
         super();
         this.state = {
-            games: [],
             gameTitle: "",
             genre: "",
             developer: "",
             trailerLink: ""
         }
     }
-    componentDidMount() {
 
+    componentDidMount() {
+        axios
+            .get("/api/games")
+            .then(response => this.props.updateGames(response.data))
+            .catch(error => alert(`You have an ${error}`))
     }
-    
+
     handleChange = e => {
         this.setState({[e.target.name]: e.target.value})
     }
     handleClick = () => {
-        axios.post("/api/game", {
-            gameTitle: this.state.gameTitle,
-            genre: this.state.genre,
-            developer: this.state.developer,
-            trailerLink: this.state.trailerLink
-        }).then(response => {
-            this.setState({games: response.data})
-        })
+        const newGame = this.state;
+        axios
+            .post("/api/game", newGame)
+            .then(response => {
+                this.props.updateGames(response.data)
+            })  
+            .catch(err => {
+                this.setState({error: "something went wrong"})
+            })
     }
 
     render () {
@@ -62,7 +66,7 @@ export default class AddGame extends Component {
                     <br />
                     <label>Trailer Link:</label>
                     <input
-                        name="gameTrailer"
+                        name="trailerLink"
                         placeholder="Enter game trailer URL"
                         onChange={this.handleChange} />
                 </div>

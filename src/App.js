@@ -1,20 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Navbar from './Components/Navbar';
-import AddGame from './Components/AddGame';
-import GameCard from './Components/GameCard';
+import AddGames from './Components/AddGames';
+import GameCards from './Components/GameCards';
 import Footerbar from './Components/Footerbar';
 
 import './App.css';
 
-function App() {
-  return (
-    <div>
-      <Navbar />
-      <AddGame />
-      <GameCard />
-      <Footerbar />
-    </div>
-  );
-}
+export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      games: []
+    }
+  }
 
-export default App;
+  updateGames = gamesArr => {
+    this.setState({games: gamesArr})
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <AddGames updateGames = {this.updateGames} />
+        <GameCards games = {this.state.games} />
+        <Footerbar />
+      </div>
+    );
+  }
+
+}
