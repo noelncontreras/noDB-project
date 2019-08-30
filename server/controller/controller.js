@@ -3,10 +3,11 @@ let games = [
         gameTitle: "Death Stranding",
         genre: "Action",
         developer: "Kojima Productions",
-        trailerLink: "https://www.youtube.com/embed/Gu8X7vM3Avw"
+        trailerLink: "https://www.youtube.com/embed/Gu8X7vM3Avw",
+        id: 0
     }
 ]
-let id = 0;
+let id = 1;
 
 module.exports = {
     read: (req, res) => {
@@ -23,6 +24,12 @@ module.exports = {
         }
         games.push(gameObj);
         id++;
+        res.status(200).json(games);
+    },
+    remove: (req, res) => {
+        let deleteId = req.params.id;
+        let gameIndex = games.findIndex(game => game.id == deleteId);
+        games.splice(gameIndex, 1);
         res.status(200).json(games);
     }
 }

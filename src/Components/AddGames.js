@@ -31,9 +31,14 @@ export default class AddGames extends Component {
             .then(response => {
                 this.props.updateGames(response.data)
             })  
-            .catch(err => {
-                this.setState({error: "something went wrong"})
-            })
+            .catch(error => alert(`You have an ${error}`))
+    }
+
+    deleteCard = id => {
+        axios.delete("api/games/:id")
+        .then(response => {
+            this.updateGames(response.data)
+        })
     }
 
     render () {

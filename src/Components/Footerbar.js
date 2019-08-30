@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footerbar.css";
 
-export default function Footerbar () {
+export default function Footerbar() {
     return (
         <footer className= "footer-container">
             <div>

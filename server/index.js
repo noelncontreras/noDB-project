@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
-const axios = require("axios");
-const {read, create} = require("./controller/controller");
+const {read, create, remove} = require("./controller/controller");
 
 app.use(express.json());
 
 app.get("/api/games", read);
 app.post("/api/game", create);
+app.delete("/api/games/:id", remove);
 
 const PORT = 5000;
 app.listen(PORT, () => {
