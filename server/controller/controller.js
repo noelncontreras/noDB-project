@@ -24,11 +24,13 @@ module.exports = {
         }
         games.push(gameObj);
         id++;
-        res.status(200).json(games);
+        res.status(201).json(games);
     },
     remove: (req, res) => {
         let deleteId = req.params.id;
+        console.log(deleteId)
         let gameIndex = games.findIndex(game => game.id == deleteId);
+        console.log(gameIndex)
         games.splice(gameIndex, 1);
         res.status(200).send(games);
     }

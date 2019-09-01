@@ -22,7 +22,7 @@ export default class App extends Component {
 
   removeGame = (id) => {
     axios
-    .delete(`/api/games/:${id}`)
+    .delete(`/api/games/${id}`)
     .then(response => {
         this.setState({games: response.data})
     })

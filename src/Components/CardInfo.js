@@ -11,7 +11,7 @@ export default function CardInfo(props) {
                         <br />
                         <button
                             id="delete-button"
-                            onClick={props.removeGame}>Delete</button>
+                            onClick={() => props.removeGame(props.game.id)}>Delete</button>
                     </div>
                     <ul className="game-info">
                         <li>Game Title: {props.game.gameTitle}</li>
