@@ -16,11 +16,18 @@ img {
     width: 7vw;
     height: 10vh;
 }
+img:hover {
+    cursor: pointer;
+}
 .website-title {
     width: 20vw;
     height: 20vh;
     font-size: 3vh;
+    font-family: 'Livvic', sans-serif;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+.website-title > h1:hover {
+    cursor: pointer;
 }

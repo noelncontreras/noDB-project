@@ -1,6 +1,7 @@
 .gamecard-container {
     width: 100vw;
     height: 25vh;
+    font-family: 'Livvic', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +27,7 @@
 }
 #edit-button {
     font-size: 18px;
+    font-family: 'Livvic', sans-serif;
     padding: 10px 24px;
     border-radius: 12px;
     border: 1px solid black;
@@ -41,6 +43,7 @@
 }
 #delete-button {
     font-size: 18px;
+    font-family: 'Livvic', sans-serif;
     padding: 10px 24px;
     border-radius: 12px;
     border: 1px solid black;

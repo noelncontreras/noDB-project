@@ -1,6 +1,7 @@
 .footer-container {
     width: 100vw;
     height: 10vh;
+    font-family: 'Livvic', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,4 +9,13 @@
     position: fixed;
     left: 0;
     bottom: 0;
+}
+#zoom-fade {
+    transition: .5s ease-in-out;
+    text-shadow: 0 0 50px transparent;
+    color:rgba(0,0,0,.7);
+    overflow: visible;
+}
+#zoom-fade:hover {
+    text-shadow: 0 0 0px black;
 }

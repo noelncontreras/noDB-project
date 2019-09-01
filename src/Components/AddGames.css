@@ -1,6 +1,7 @@
 .add-container {
     width: 100vw;
     height: 20vh;
+    font-family: 'Livvic', sans-serif;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -29,6 +30,7 @@
 }
 #add-button {
     font-size: 24px;
+    font-family: 'Livvic', sans-serif;
     padding: 10px 24px;
     border-radius: 12px;
     border: 1px solid black;
