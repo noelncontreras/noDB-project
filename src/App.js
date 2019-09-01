@@ -16,14 +16,16 @@ export default class App extends Component {
   }
 
   updateGames = gamesArr => {
+    console.log(gamesArr)
     this.setState({games: gamesArr})
   }
 
-  removeGame = (id) => {
+  removeGame = id => {
     axios
     .delete(`/api/games/${id}`)
     .then(response => {
-        this.setState({games: response.data})
+      console.log(response.data)
+      this.setState({games: response.data})
     })
 }
 

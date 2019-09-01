@@ -12,13 +12,19 @@ export default class CardInfo extends Component {
     componentDidMount() {
         this.setState({game: this.props.game})
     }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps !== this.props) {
+            this.setState({game: this.props.game})
+        }
+    }
     
     handleEdit = () => {
         this.setState({edit: true});
     }
 
     handleChange = e => {
-        let gameCopy = {...this.state.game}
+        let gameCopy = {...this.props.game}
         gameCopy[e.target.name] = e.target.value
         this.setState({game: gameCopy})
     }
@@ -59,6 +65,7 @@ export default class CardInfo extends Component {
                         <input name="gameTitle" value={gameTitle} onChange={this.handleChange}/>
                         <input name="genre" value={genre} onChange={this.handleChange}/>
                         <input name="developer" value={developer} onChange={this.handleChange}/>
+                        <input name="trailerLink" value={trailerLink} onChange={this.handleChange}/>
                         <button onClick={() => this.handleSubmit(id)}>Submit</button>
                         <button onClick={() => this.handleCancel(id)}>Cancel</button>
                     </div>
