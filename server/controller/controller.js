@@ -30,6 +30,6 @@ module.exports = {
         let deleteId = req.params.id;
         let gameIndex = games.findIndex(game => game.id == deleteId);
         games.splice(gameIndex, 1);
-        res.status(200).json(games);
+        res.status(200).send(games);
     }
 }

@@ -34,16 +34,9 @@ export default class AddGames extends Component {
             .catch(error => alert(`You have an ${error}`))
     }
 
-    deleteCard = id => {
-        axios.delete("api/games/:id")
-        .then(response => {
-            this.updateGames(response.data)
-        })
-    }
-
     render () {
         return (
-            <section className= "add-container">
+            <section className="add-container">
                 <div className="title-genre">
                     <label>Game Title:</label>
                     <input

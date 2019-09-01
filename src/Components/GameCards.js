@@ -5,7 +5,7 @@ import "./GameCards.css";
 export default function GameCards(props) {
     const gamesMapped = props.games.map((game, i) => {
         return (
-            <CardInfo game ={game} key={i} />
+            <CardInfo game ={game} key={i} removeGame={props.removeGame}/>
         )
     })
 
