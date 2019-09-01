@@ -16,7 +16,6 @@ export default class App extends Component {
   }
 
   updateGames = gamesArr => {
-    console.log(gamesArr)
     this.setState({games: gamesArr})
   }
 
