@@ -33,8 +33,8 @@ export default class App extends Component {
     return (
       <div>
         <Navbar />
-        <AddGames updateGames = {this.updateGames} />
-        <GameCards games = {this.state.games} removeGame={this.removeGame} />
+        <AddGames updateGames={this.updateGames} />
+        <GameCards games={this.state.games} removeGame={this.removeGame} />
         <Footerbar />
       </div>
     );

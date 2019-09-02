@@ -61,7 +61,8 @@ export default class CardInfo extends Component {
                         <li>Genre: {genre}</li>
                         <li>Developer: {developer}</li>
                     </ul>
-                    : <div>
+                    : 
+                    <div>
                         <input name="gameTitle" value={gameTitle} onChange={this.handleChange}/>
                         <input name="genre" value={genre} onChange={this.handleChange}/>
                         <input name="developer" value={developer} onChange={this.handleChange}/>
