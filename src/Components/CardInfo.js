@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./CardInfo.css";
 import axios from "axios";
 
 export default class CardInfo extends Component {
@@ -49,11 +50,9 @@ export default class CardInfo extends Component {
                         <iframe src={trailerLink} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="" title="trailer"></iframe>
                     </div>
                     <div className="edit-delete">
-                        <button onClick={this.handleEdit} id="edit-button">Edit</button>
+                        <button id="edit-button" onClick={this.handleEdit}>Edit</button>
                         <br />
-                        <button
-                            id="delete-button"
-                            onClick={() => this.props.removeGame(id)}>Delete</button>
+                        <button id="delete-button" onClick={() => this.props.removeGame(id)}>Delete</button>
                     </div>
                     {!this.state.edit ?
                     <ul className="game-info">
@@ -62,14 +61,16 @@ export default class CardInfo extends Component {
                         <li>Developer: {developer}</li>
                     </ul>
                     : 
-                    <div>
-                        <input name="gameTitle" value={gameTitle} onChange={this.handleChange}/>
-                        <input name="genre" value={genre} onChange={this.handleChange}/>
-                        <input name="developer" value={developer} onChange={this.handleChange}/>
-                        <input name="trailerLink" value={trailerLink} onChange={this.handleChange}/>
-                        <button onClick={() => this.handleSubmit(id)}>Submit</button>
-                        <button onClick={() => this.handleCancel(id)}>Cancel</button>
-                    </div>
+                        <div className="edit-feature">
+                            <input name="gameTitle" value={gameTitle} onChange={this.handleChange} />
+                            <input name="genre" value={genre} onChange={this.handleChange} />
+                            <input name="developer" value={developer} onChange={this.handleChange} />
+                            <input name="trailerLink" value={trailerLink} onChange={this.handleChange} />
+                            <div className="submit-cancel">
+                                <button id="submit-button" onClick={() => this.handleSubmit(id)}>Submit</button>
+                                <button id="cancel-button" onClick={() => this.handleCancel(id)}>Cancel</button>
+                            </div>
+                        </div>
                     }
                 </section>
             )

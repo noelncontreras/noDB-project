@@ -23,6 +23,7 @@ img:hover {
     width: 20vw;
     height: 20vh;
     font-size: 3vh;
+    letter-spacing: 1px;
     font-family: 'Livvic', sans-serif;
     display: flex;
     justify-content: flex-end;

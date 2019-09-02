@@ -9,6 +9,8 @@
 }
 .title-genre {
     font-size: 24px;
+    letter-spacing: 1.5px;
+    font-weight: bolder;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,6 +32,7 @@
 }
 #add-button {
     font-size: 24px;
+    font-weight: bolder;
     font-family: 'Livvic', sans-serif;
     padding: 10px 24px;
     border-radius: 12px;
@@ -38,14 +41,21 @@
     transition-duration: 0.2s;
     cursor: pointer;
     outline: none;
+    transition: .5s ease-in-out;
+    text-shadow: 0 0 50px transparent;
+    color:rgba(0,0,0,.7);
+    overflow: visible;
 }
 #add-button:hover {
     color: white;
     border: 1px solid #d21919;
     background-color: #2e2e2e;
+    text-shadow: 0 0 20px white;
 }
 .developer-trailer {
     font-size: 24px;
+    letter-spacing: 1.5px;
+    font-weight: bolder;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,0 +1,151 @@
+.gamecard-container {
+    width: 100vw;
+    height: 25vh;
+    font-family: 'Livvic', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8b8989;
+    border: 1px solid black;
+    border-left-style: none;
+    border-right-style: none;
+}
+.video-frame {
+    width: 300px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+}
+.edit-delete {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 40px;
+}
+#edit-button {
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Livvic', sans-serif;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: #d21919;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-in-out;
+    text-shadow: 0 0 50px transparent;
+    color:rgba(0,0,0,.7);
+    overflow: visible;
+}
+#edit-button:hover {
+    color: white;
+    border: 1px solid #d21919;
+    background-color: #2e2e2e;
+    text-shadow: 0 0 20px white;
+}
+#delete-button {
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Livvic', sans-serif;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: #d21919;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-in-out;
+    text-shadow: 0 0 50px transparent;
+    color:rgba(0,0,0,.7);
+    overflow: visible;
+}
+#delete-button:hover {
+    color: white;
+    border: 1px solid #d21919;
+    background-color: #2e2e2e;
+    text-shadow: 0 0 20px white;
+}
+.game-info {
+    width: 15vw;
+    height: 25vh;
+    letter-spacing: 0.2px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.game-info > li {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+.edit-feature {
+    width: 15vw;
+    height: 22vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 40px;
+}
+.edit-feature > input {
+    width: 12vw;
+    height: 3vh;
+    border: 2px solid #d21919;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+.submit-cancel {
+    width: 12vw;
+    display: flex;
+    justify-content: space-between;
+}
+#submit-button {
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Livvic', sans-serif;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: #d21919;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-in-out;
+    text-shadow: 0 0 50px transparent;
+    color:rgba(0,0,0,.7);
+    overflow: visible;
+}
+#submit-button:hover {
+    color: white;
+    border: 1px solid #d21919;
+    background-color: #2e2e2e;
+    text-shadow: 0 0 20px white;
+}
+#cancel-button {
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Livvic', sans-serif;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: #d21919;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-in-out;
+    text-shadow: 0 0 50px transparent;
+    color:rgba(0,0,0,.7);
+    overflow: visible;
+}
+#cancel-button:hover {
+    color: white;
+    border: 1px solid #d21919;
+    background-color: #2e2e2e;
+    text-shadow: 0 0 20px white;
+}
