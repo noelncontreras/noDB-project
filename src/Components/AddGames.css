@@ -26,9 +26,11 @@
     outline: none;
 }
 .add-box {
-    margin-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 #add-button {
     font-size: 24px;
@@ -41,13 +43,12 @@
     transition-duration: 0.2s;
     cursor: pointer;
     outline: none;
-    transition: .5s ease-in-out;
+    transition: .1s ease-in-out;
     text-shadow: 0 0 50px transparent;
-    color:rgba(0,0,0,.7);
+    color: white;
     overflow: visible;
 }
 #add-button:hover {
-    color: white;
     border: 1px solid #d21919;
     background-color: #2e2e2e;
     text-shadow: 0 0 20px white;
