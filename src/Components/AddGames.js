@@ -65,7 +65,7 @@ export default class AddGames extends Component {
                     <label>Trailer Link:</label>
                     <input
                         name="trailerLink"
-                        placeholder="Enter game trailer URL"
+                        placeholder="Please use embedded YT link"
                         onChange={this.handleChange} />
                 </div>
             </section>
