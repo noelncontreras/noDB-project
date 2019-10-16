@@ -7,7 +7,7 @@ export default function Footerbar() {
     return (
         <footer className= "footer-container">
             <div>
-                <h1 id="zoom-fade">{footerText}</h1>
+                <a style={{textDecoration: "none"}} href="https://github.com/noelncontreras/noDB-project"><h1 id="zoom-fade">{footerText}</h1></a>
             </div>
         </footer>
     )
